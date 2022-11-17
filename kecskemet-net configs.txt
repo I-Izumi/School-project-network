@@ -1,0 +1,39 @@
+SW-kecskement switch
+
+enable
+configure terminal
+enable secret PROJEKT22
+user ADMIN1 secret GDszeged22
+ip domain-name GDszeged22
+crypto key generate rsa general modulus 4096
+default-gateway 185.62.128.129
+line vty 0 15
+banner motd
+transport input ssh
+login local
+exit
+interface Gig #########
+ip address 185.62.128.190 255.255.255.192
+no shutdown
+exit
+motd banner C Magan terulet C
+exit
+write
+
+
+
+R-KECSKEMET
+
+enable
+configure terminal
+interface Gig #########
+ip address 185.62.128.129 255.255.255.192
+no shutdown
+exit
+ip route 185.62.128.0 255.255.255.128 185.62.128.129
+ip route 185.62.128.192 255.255.255.224 185.62.128.129
+ip route 192.168.10.0 255.255.255.0 185.62.128.129
+exit
+write
+
+
