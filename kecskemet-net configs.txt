@@ -6,17 +6,17 @@ enable secret PROJEKT22
 user ADMIN1 secret GDszeged22
 ip domain-name GDszeged22
 crypto key generate rsa general modulus 4096
-default-gateway 185.62.128.129
+ip default-gateway 185.62.128.129
 line vty 0 15
 banner motd
 transport input ssh
 login local
 exit
-interface Gig #########
+interface vlan 1
 ip address 185.62.128.190 255.255.255.192
 no shutdown
 exit
-motd banner C Magan terulet C
+banner motd C Magan terulet C
 exit
 write
 
@@ -26,7 +26,7 @@ R-KECSKEMET
 
 enable
 configure terminal
-interface Gig #########
+interface Gig0/1
 ip address 185.62.128.129 255.255.255.192
 no shutdown
 exit
