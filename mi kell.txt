@@ -3,3 +3,4 @@ crypto key
 route, next hop vagy https szerver cím
 szolnoknál be nem megy ping csak ki 
 google router dns cím 0.0.0.0-ra
+ok-n parancsok
