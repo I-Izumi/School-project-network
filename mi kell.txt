@@ -1,3 +1,0 @@
-route, next hop vagy https szerver cím
-szolnoknál be nem megy ping csak ki (?)
-tftp szerverre menteni a konfigokat
